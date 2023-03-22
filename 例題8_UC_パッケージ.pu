@@ -7,6 +7,6 @@ package Java応用ゼミ
 
 選択授業-[dashed]->学生
 選択授業-[bold]->先生
-学生-[dashed]->Java応用ゼミ
-先生-[dashed]->Java応用ゼミ
+学生-[dotted]->Java応用ゼミ
+先生-[plain]->Java応用ゼミ
 @enduml
