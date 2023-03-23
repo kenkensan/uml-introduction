@@ -1,0 +1,12 @@
+@startuml 演習2-4
+left to right direction
+actor 販売部A
+actor 販売部B
+
+
+rectangle 販売管理システム{
+
+}
+販売部A -->販売管理システム :<<商品確認>>
+販売部B -->販売管理システム :<<商品登録>>
+@enduml
