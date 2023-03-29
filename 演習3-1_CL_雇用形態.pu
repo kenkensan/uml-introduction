@@ -1,17 +1,21 @@
 @startuml 演習3-1
 class 従業員{
+    ---
 + {abstract}出勤する:void
 + {abstract}給料をもらう:void
 }
 class 派遣{
+    ---
 + 出勤する:void
 + 給料をもらう:void
 }
 class 契約社員{
+    ---
 + 出勤する:void
 + 給料をもらう:void
 }
 class 正社員{
+    ---
 + 出勤する:void
 + 給料をもらう:void
 }
