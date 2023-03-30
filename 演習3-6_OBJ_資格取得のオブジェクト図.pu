@@ -1,0 +1,31 @@
+@startuml 3-6
+left to right direction
+object "<u>社員情報1:社員</u>" as p1{
+    氏名=高橋洋平さん
+    資格申請日=2020年10月21日
+}
+object "<u>社員情報1:社員</u>" as p2{
+    氏名=高橋洋平さん
+    資格申請日=2021年3月28日
+}
+object "<u>社員情報2:社員</u>" as p3{
+    氏名=樋口正之さん
+}
+object "<u>資格情報1:資格</u>" as s1{
+    名称=情報処理技術者試験の情報処理安全確保支援士
+}
+object "<u>資格情報2:資格</u>" as sa2{
+    名称=LinuC試験Level1
+}
+object "<u>会社情報:会社</u>" as c1{
+    会社名
+    
+}
+p1 -- s1 :持つ
+p3 -- s1 :持つ
+p2 -- sa2 :持つ
+
+c1 o-- p1
+c1 o-- p2
+c1 o-- p3
+@enduml
