@@ -1,0 +1,21 @@
+@startuml 3-4-2
+object "<u>車情報: 車</u>" as car {
+車種
+}
+object "<u>タイヤ情報1: タイヤ</u>" as t1{
+大きさ
+}
+object "<u>タイヤ情報2: タイヤ</u>" as t2{
+大きさ
+}
+object "<u>タイヤ情報3: タイヤ</u>" as t3{
+大きさ
+}
+object "<u>タイヤ情報4: タイヤ</u>" as t4{
+大きさ
+}
+car -- t1
+car -- t2
+car -- t3
+car -- t4
+@enduml
