@@ -5,14 +5,15 @@ participant ":ブラウザ" as boundary
 participant ":WEBサーバ" as control
 participant ":画像サーバ" as entity
 activate actor
-actor -> boundary :画像閲覧()
+actor -> boundary :リンクをクリックする
 activate boundary
-boundary -> control :画像探索命令()
+boundary -> control :画像ファイル名を渡す
 activate control
-control -> entity :画像探索()
+control -> entity :画像ファイルを探す命令をする
 activate entity
-control <- entity :画像閲覧可能()
-boundary <- control :画像再生()
-actor <- boundary :画像表示()
+entity -> entity :画像ファイルを探す
+control <<-- entity :画像ファイル
+boundary <<-- control :画像ファイルとHTML
+actor <<-- boundary :画像の閲覧
 
 @enduml
