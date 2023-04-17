@@ -1,0 +1,12 @@
+@startuml 演習4-2
+hide footbox
+participant "user: 利用者" as control
+participant ": 予約画面" as entity
+mainframe sd 予約画面
+activate control
+control -> entity : ログインを行う()
+activate entity
+entity -> entity : 認証()
+activate entity
+deactivate entity
+@enduml

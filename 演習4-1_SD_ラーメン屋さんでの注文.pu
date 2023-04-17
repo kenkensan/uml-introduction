@@ -1,0 +1,16 @@
+@startuml 演習4-1
+hide footbox
+actor ":客" as boundary
+participant ":フロア店員" as control
+participant ":料理人" as entity
+mainframe sd ラーメン屋さん
+    activate boundary
+    boundary -> control : ラーメンを注文する
+        activate control
+        control -> entity :調理を指示する
+        activate entity
+        entity -> entity :調理をする
+        control <<-- entity : ラーメン
+        deactivate entity
+        boundary <<-- control : ラーメン
+@enduml

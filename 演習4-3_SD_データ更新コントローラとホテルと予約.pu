@@ -1,0 +1,15 @@
+@startuml 演習4-3
+hide footbox
+participant ":データ更新コントローラ" as boundary <<controller>>
+participant ":ホテル" as control <<hotel>>
+participant "予約" as entity
+activate boundary
+boundary -> control: 予約する()
+activate control
+create entity
+control -> entity :<<create>>
+control -> control :予約登録()
+activate control
+deactivate control
+
+@enduml

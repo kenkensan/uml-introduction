@@ -1,0 +1,17 @@
+@startuml 演習4-6
+hide footbox
+actor ":ユーザ" as actor
+participant ":ブラウザ" as boundary
+participant ":WEBサーバ" as control
+participant ":画像サーバ" as entity
+activate actor
+actor -> boundary :画像閲覧()
+activate boundary
+boundary -> control :画像探索命令()
+activate control
+control -> entity :画像探索()
+activate entity
+control <- entity :画像閲覧可能
+boundary <- control :画像再生
+
+@enduml
