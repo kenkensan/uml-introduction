@@ -11,7 +11,8 @@ boundary -> control :画像探索命令()
 activate control
 control -> entity :画像探索()
 activate entity
-control <- entity :画像閲覧可能
-boundary <- control :画像再生
+control <- entity :画像閲覧可能()
+boundary <- control :画像再生()
+actor <- boundary :画像表示()
 
 @enduml
