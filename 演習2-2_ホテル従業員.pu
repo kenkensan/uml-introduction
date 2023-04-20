@@ -4,5 +4,5 @@ rectangle ホテル {
 actor 経営者
 actor ホテル従業員
 }
-ホテル従業員 <.. 経営者
+ホテル従業員 <|... 経営者
 @enduml
