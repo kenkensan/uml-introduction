@@ -1,0 +1,19 @@
+@startuml 演習6-4-3
+hide footbox
+Actor 客 as member
+participant ":料金装置" as boundary
+participant ":ボタン" as control
+participant ":ベンター装置" as entity
+activate boundary
+member --> boundary :お金を入れる()
+activate control
+member --> control :ボタンを押す()
+alt ドリンクがある場合
+activate entity
+entity --> member :ドリンクが出てくる()
+deactivate entity
+else ドリンクがない場合
+entity --> member :何も起こらない()
+activate entity
+end alt
+@enduml

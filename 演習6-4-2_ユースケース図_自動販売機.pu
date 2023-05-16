@@ -1,0 +1,17 @@
+@startuml 演習6-4-2
+left to right direction
+actor 客
+actor ベンター
+rectangle 自動販売機{
+    usecase ドリンクを運ぶ as u1
+    usecase 料金を回収する as u2
+    usecase お金を入れる as u3
+    usecase ボタンを押す as u4
+    usecase ドリンクが出てくる as u5
+}
+ベンター --> u1
+ベンター --> u2
+客 --> u3
+客 --> u4
+客 --> u5
+@enduml

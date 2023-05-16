@@ -1,0 +1,17 @@
+@startuml 演習6-3_ユースケース
+left to right direction
+actor 患者
+actor 看護師
+rectangle 〇〇医院予約システム{
+    usecase 予約登録をする as u1
+    usecase 予約取り消しをする as u2
+    usecase 順番の確認をする as u3
+    usecase 患者番号を一つ増やす as u4
+}
+u1 <. u2 : << include >>
+u1 <. u3 : << include >>
+患者 --> u1
+患者 --> u2
+患者 --> u3
+看護師 --> u4
+@enduml

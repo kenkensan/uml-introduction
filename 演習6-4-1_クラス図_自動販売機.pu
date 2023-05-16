@@ -1,0 +1,18 @@
+@startuml 演習6-4-1
+left to right direction
+class 自動販売機{
+
+}
+class ボタン{
+    
+}
+class 料金装置{
+    
+}
+class ベンター装置{
+    
+}
+自動販売機"1"*--"10" ボタン
+自動販売機"1"*-- "1" 料金装置
+自動販売機"1"*-- "1" ベンター装置
+@enduml
