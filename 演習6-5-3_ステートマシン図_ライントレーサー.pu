@@ -1,0 +1,10 @@
+@startuml 演習6-5-3
+left to right direction
+[*]-->電源SWがON :電源SWをつける
+state c <<choice>>
+電源SWがON-->c
+c --> 左旋回 :光センサーがラインを外れた場合
+c --> 右旋回 :光センサーがライン上にある場合
+電源SWがON-->電源SWがOFF :電源SWを切る
+電源SWがOFF -->[*]
+@enduml
