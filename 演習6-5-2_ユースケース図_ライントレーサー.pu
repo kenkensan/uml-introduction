@@ -1,3 +1,23 @@
 @startuml 演習6-5-2
+left to right direction
+actor ユーザー as a1
+rectangle ライントレーサー{
+    actor CPU as a2
+    usecase システムが起動する as u1
+    usecase ラインの右境界線上を進む as u2
+    usecase 右モータOFF左モータONにする as u3
+    usecase 右モータON左モータOFFにする as u4
+    usecase 右旋回を始める as u5
+    usecase 左旋回を始める as u6
+}
+a1 --> u1
+a2 --> u3
+a2 --> u4
+u5 ....> u2:<<include>>
+u6 ....> u2:<<include>>
+u1 ....> u3:<<include>>
+u1 ....> u4:<<include>>
+u3 ...> u5:<<extend>>
+u4 ...> u6:<<extend>>
 
 @enduml
